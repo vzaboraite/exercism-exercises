@@ -30,6 +30,11 @@
 //
 // Good luck preparing some lasagna!
 
+/*
+ * The number of minutes the lasagna should be in the oven.
+ */
+export const EXPECTED_MINUTES_IN_OVEN = 40;
+
 /**
  * The number of minutes it takes to prepare a single layer.
  */
