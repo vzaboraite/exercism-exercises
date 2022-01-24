@@ -20,6 +20,7 @@
 // Get those rates calculated!
 
 const WORK_HOURS_PER_DAY = 8;
+const BILLABLE_DAYS = 22;
 
 /**
  * The day rate, given a rate per hour
@@ -51,5 +52,15 @@ export function daysInBudget(budget, ratePerHour) {
  * @returns {number} the rounded up discounted rate
  */
 export function priceWithMonthlyDiscount(ratePerHour, numDays, discount) {
-  throw new Error("Implement the priceWithMonthlyDiscount function");
+  const dRate = dayRate(ratePerHour);
+  const daysWithoutDiscount = numDays % BILLABLE_DAYS;
+  const daysWithDiscount = numDays - daysWithoutDiscount;
+  const costForDaysWithoutDiscount = daysWithoutDiscount * dRate;
+  const costForDaysWithDiscount = daysWithDiscount * dRate * (1 - discount);
+
+  const result = Math.ceil(
+    costForDaysWithoutDiscount + costForDaysWithDiscount
+  );
+
+  return result;
 }
