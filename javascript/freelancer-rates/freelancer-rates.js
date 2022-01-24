@@ -19,6 +19,8 @@
 //
 // Get those rates calculated!
 
+const WORK_HOURS_PER_DAY = 8;
+
 /**
  * The day rate, given a rate per hour
  *
