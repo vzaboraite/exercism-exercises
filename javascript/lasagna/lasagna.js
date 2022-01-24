@@ -48,7 +48,9 @@ const PREPARATION_MINUTES_PER_LAYER = 2;
  * @returns {number} the number of minutes remaining
  */
 export function remainingMinutesInOven(actualMinutesInOven) {
-  throw new Error("Please implement the remainingMinutesInOven function");
+  const remainingMinutesInOven = EXPECTED_MINUTES_IN_OVEN - actualMinutesInOven;
+
+  return remainingMinutesInOven;
 }
 
 /**
