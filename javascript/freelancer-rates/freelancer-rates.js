@@ -39,7 +39,7 @@ export function dayRate(ratePerHour) {
  * @returns {number} the number of days
  */
 export function daysInBudget(budget, ratePerHour) {
-  throw new Error("Implement the daysInBudget function");
+  return Math.floor(budget / dayRate(ratePerHour));
 }
 
 /**
