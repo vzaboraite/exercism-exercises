@@ -6,12 +6,13 @@ export const countWords = (string) => {
     if (lowerCasedWord === "") {
       return;
     }
+
     if (result.hasOwnProperty(lowerCasedWord)) {
       result[lowerCasedWord] += 1;
     } else {
       result[lowerCasedWord] = 1;
     }
   });
-  console.log(result, { words, string });
+
   return result;
 };
