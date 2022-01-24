@@ -28,7 +28,7 @@ const WORK_HOURS_PER_DAY = 8;
  * @returns {number} the rate per day
  */
 export function dayRate(ratePerHour) {
-  throw new Error("Implement the dayRate function");
+  return WORK_HOURS_PER_DAY * ratePerHour;
 }
 
 /**
