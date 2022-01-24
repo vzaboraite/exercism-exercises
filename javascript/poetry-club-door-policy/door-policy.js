@@ -27,7 +27,7 @@
  * @returns {string}
  */
 export function frontDoorResponse(line) {
-  throw new Error("Implement the frontDoorResponse function");
+  return line[0];
 }
 
 /**
