@@ -27,7 +27,7 @@
  * @return {boolean} Whether or not you can execute a fast attack.
  */
 export function canExecuteFastAttack(knightIsAwake) {
-  throw new Error("Implement the canExecuteFastAttack function");
+  return knightIsAwake ? false : true;
 }
 
 /**
