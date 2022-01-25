@@ -66,5 +66,8 @@ export function backDoorResponse(line) {
  * @returns {string} the back door password
  */
 export function backDoorPassword(word) {
-  throw new Error("Implement the backDoorPassword function");
+  const capitalizedWord = frontDoorPassword(word);
+  const politePassword = `${capitalizedWord}, please`;
+
+  return politePassword;
 }
