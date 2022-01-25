@@ -79,5 +79,15 @@ export function canFreePrisoner(
   prisonerIsAwake,
   petDogIsPresent
 ) {
-  throw new Error("Implement the canFreePrisoner function");
+  if (archerIsAwake === false && petDogIsPresent === true) {
+    return true;
+  } else if (
+    prisonerIsAwake === true &&
+    knightIsAwake === false &&
+    archerIsAwake === false
+  ) {
+    return true;
+  } else {
+    return false;
+  }
 }
