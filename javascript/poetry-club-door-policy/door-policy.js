@@ -52,7 +52,10 @@ export function frontDoorPassword(word) {
  * @returns {string}
  */
 export function backDoorResponse(line) {
-  throw new Error("Implement the backDoorResponse function");
+  const normalizedLine = line.trim();
+  const lastLetter = normalizedLine[normalizedLine.length - 1];
+
+  return lastLetter;
 }
 
 /**
