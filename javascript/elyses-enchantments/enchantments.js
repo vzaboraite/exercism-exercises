@@ -50,7 +50,9 @@ export function insertItemAtTop(cards, newCard) {
  * @returns {number[]} the cards without the removed card
  */
 export function removeItem(cards, position) {
-  throw new Error("Implement the removeItem function");
+  cards.splice(position, 1);
+
+  return cards;
 }
 
 /**
@@ -61,7 +63,9 @@ export function removeItem(cards, position) {
  * @returns {number[]} the cards without the removed card
  */
 export function removeItemFromTop(cards) {
-  throw new Error("Implement the removeItemFromTop function");
+  cards.pop();
+
+  return cards;
 }
 
 /**
@@ -86,7 +90,9 @@ export function insertItemAtBottom(cards, newCard) {
  * @returns {number[]} the cards without the removed card
  */
 export function removeItemAtBottom(cards) {
-  throw new Error("Implement the removeItemAtBottom function");
+  cards.shift();
+
+  return cards;
 }
 
 /**
