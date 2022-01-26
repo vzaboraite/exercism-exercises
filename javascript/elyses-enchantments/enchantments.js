@@ -9,7 +9,7 @@
  * @returns {number} the card
  */
 export function getItem(cards, position) {
-  throw new Error("Implement the getItem function");
+  return cards[position];
 }
 
 /**
