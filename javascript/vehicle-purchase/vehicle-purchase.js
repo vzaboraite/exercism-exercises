@@ -37,5 +37,17 @@ export function chooseVehicle(option1, option2) {
  * @returns expected resell price in the dealership
  */
 export function calculateResellPrice(originalPrice, age) {
-  throw new Error("Please implement the calculateResellPrice function");
+  const discount80 = originalPrice * 0.8;
+  const discount50 = originalPrice * 0.5;
+  const discount70 = originalPrice * 0.7;
+
+  if (age < 3) {
+    return discount80;
+  } else if (age > 10) {
+    return discount50;
+  } else if (age >= 3 || age <= 10) {
+    return discount70;
+  } else {
+    return originalPrice;
+  }
 }
