@@ -36,7 +36,9 @@ export function setItem(cards, position, replacementCard) {
  * @returns {number[]} the cards with the newCard applied
  */
 export function insertItemAtTop(cards, newCard) {
-  throw new Error("Implement the insertItemAtTop function");
+  cards.push(newCard);
+
+  return cards;
 }
 
 /**
@@ -71,7 +73,9 @@ export function removeItemFromTop(cards) {
  * @returns {number[]} the cards including the new card
  */
 export function insertItemAtBottom(cards, newCard) {
-  throw new Error("Implement the insertItemAtBottom function");
+  cards.unshift(newCard);
+
+  return cards;
 }
 
 /**
