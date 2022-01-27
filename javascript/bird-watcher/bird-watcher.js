@@ -11,9 +11,7 @@
  * @returns {number} total bird count
  */
 export function totalBirdCount(birdsPerDay) {
-  const total = birdsPerDay.reduce((prev, curr) => prev + curr);
-
-  return total;
+  return birdsPerDay.reduce((prev, curr) => prev + curr);
 }
 
 /**
