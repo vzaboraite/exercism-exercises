@@ -27,7 +27,14 @@ export function totalBirdCount(birdsPerDay) {
  * @returns {number} birds counted in the given week
  */
 export function birdsInWeek(birdsPerDay, week) {
-  throw new Error("Please implement the birdsInWeek function");
+  let total = 0;
+  const weekIndex = week * 7;
+  const birdsPerWeek = birdsPerDay.slice(weekIndex - 7, weekIndex);
+  for (let i = 0; i < birdsPerWeek.length; i++) {
+    total += birdsPerWeek[i];
+  }
+
+  return total;
 }
 
 /**
