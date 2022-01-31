@@ -11,7 +11,27 @@
  * @returns {number} time in minutes
  */
 export function timeToMixJuice(name) {
-  throw new Error('Please implement the timeToMixJuice function');
+  let time = 0;
+  switch (name) {
+    case "Pure Strawberry Joy":
+      time = 0.5;
+      break;
+    case "Energizer":
+    case "Green Garden":
+      time = 1.5;
+      break;
+    case "Tropical Island":
+      time = 3;
+      break;
+    case "All or Nothing":
+      time = 5;
+      break;
+    default:
+      time = 2.5;
+      break;
+  }
+
+  return time;
 }
 
 /**
