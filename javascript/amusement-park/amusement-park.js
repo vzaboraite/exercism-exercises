@@ -65,11 +65,7 @@ export function ticketStatus(tickets, ticketId) {
  */
 export function simpleTicketStatus(tickets, ticketId) {
   const ticket = tickets[ticketId];
-  if (ticket === null || ticket === undefined) {
-    return "invalid ticket !!!";
-  } else {
-    return ticket;
-  }
+  return ticket ?? "invalid ticket !!!";
 }
 
 /**
