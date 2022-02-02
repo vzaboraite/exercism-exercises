@@ -67,3 +67,20 @@ export function quantities(layers) {
 
   return quantity;
 }
+
+/**
+ * - add secret ingredient to array2
+ * - don't modify array1
+ * - no return
+ *
+ * @param {string[]} array1
+ * @param {string[]} array2
+ */
+
+export function addSecretIngredient(array1, array2) {
+  const secretIngredient = array1.find(
+    (el) => array1.indexOf(el) === array1.length - 1
+  );
+
+  array2.push(secretIngredient);
+}
