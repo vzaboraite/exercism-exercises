@@ -8,7 +8,11 @@
  * @returns {number} sum of the two arrays
  */
 export function twoSum(array1, array2) {
-  throw new Error("Implement the twoSum function");
+  const num1 = array1.join("");
+  const num2 = array2.join("");
+  const sum = Number(num1) + Number(num2);
+
+  return sum;
 }
 
 /**
