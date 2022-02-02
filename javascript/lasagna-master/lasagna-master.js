@@ -84,3 +84,21 @@ export function addSecretIngredient(array1, array2) {
 
   array2.push(secretIngredient);
 }
+
+/**
+ * - don't modify original recipe
+ *
+ * @param {Recipe} originalRecipe object for 2 portions
+ * @param {number} numberOfPortions
+ * @returns {Recipe} recipe object scaled to numberOfPortions
+ */
+
+export function scaleRecipe(originalRecipe, numberOfPortions) {
+  const scaledRecipe = {};
+  for (const ingredient in originalRecipe) {
+    const amountForSinglePortion = originalRecipe[ingredient] / 2;
+    scaledRecipe[ingredient] = amountForSinglePortion * numberOfPortions;
+  }
+
+  return scaledRecipe;
+}
