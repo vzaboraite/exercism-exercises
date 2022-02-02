@@ -54,6 +54,8 @@ export function graduationFor(name, year) {
  * @returns {string} cost to create the sign
  */
 
+// basePrice = 20
+// pricePerLetter = 2
 export function costOf(sign, currency) {
-  throw new Error("Implement the costOf function");
+  return `Your sign costs ${(sign.length * 2 + 20).toFixed(2)} ${currency}.`;
 }
