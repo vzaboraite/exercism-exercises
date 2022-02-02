@@ -47,7 +47,12 @@ export function scale2d(sx, sy) {
  *  transformed coordinate pair in the form [x, y]
  */
 export function composeTransform(f, g) {
-  throw new Error("Implement the composeTransform function");
+  return (x, y) => {
+    // 1. execute first function, store x and y coordinates in result variable
+    const result = f(x, y);
+    // 2. execute second function, pass first and second values of result[]
+    return g(result[0], result[1]);
+  };
 }
 
 /**
