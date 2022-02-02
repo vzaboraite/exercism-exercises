@@ -100,5 +100,6 @@ export function scaleRecipe(originalRecipe, numberOfPortions) {
     scaledRecipe[ingredient] = amountForSinglePortion * numberOfPortions;
   }
 
+  // @ts-ignore
   return scaledRecipe;
 }
