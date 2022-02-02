@@ -35,3 +35,35 @@ export function cookingStatus(time) {
 export function preparationTime(layers, time = 2) {
   return layers.length * time;
 }
+
+/**
+ * @param {string[]} layers
+ * @returns {Quantities} the quantity object with noodles and sauce properties
+ */
+
+export function quantities(layers) {
+  const quantity = {
+    noodles: 0,
+    sauce: 0,
+  };
+
+  layers.forEach((layer) => {
+    if (layer === "noodles") {
+      return {
+        ...quantity,
+        noodles: (quantity.noodles += 50),
+        sauce: 0,
+      };
+    }
+
+    if (layer === "sauce") {
+      return {
+        ...quantity,
+        noodles: 0,
+        sauce: (quantity.sauce += 0.2),
+      };
+    }
+  });
+
+  return quantity;
+}
