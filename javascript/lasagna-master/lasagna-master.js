@@ -25,3 +25,13 @@ export function cookingStatus(time) {
     return "Not done, please wait.";
   }
 }
+
+/**
+ * @param {string[]} layers
+ * @param {number} time per layer, default value 2
+ * @returns {number} total preparation time
+ */
+
+export function preparationTime(layers, time = 2) {
+  return layers.length * time;
+}
