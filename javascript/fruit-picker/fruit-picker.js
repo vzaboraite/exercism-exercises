@@ -16,7 +16,7 @@ import { checkStatus, checkInventory } from "./grocer";
  * @return {boolean}
  */
 export function isServiceOnline() {
-  throw new Error("Implement the isServiceOnline function");
+  return checkStatus((status) => status === "ONLINE");
 }
 
 /**
