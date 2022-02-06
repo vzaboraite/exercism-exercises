@@ -8,7 +8,7 @@
  * @returns {Card} the first card in the deck
  */
 export function getFirstCard(deck) {
-  throw new Error("Implement the getFirstCard function");
+  return [...deck].shift();
 }
 
 /**
