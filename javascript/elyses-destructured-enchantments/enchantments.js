@@ -19,7 +19,7 @@ export function getFirstCard(deck) {
  * @returns {Card} the second card in the deck
  */
 export function getSecondCard(deck) {
-  return [...deck].slice(1, 2)[0];
+  return deck.slice(1, 2).shift();
 }
 
 /**
