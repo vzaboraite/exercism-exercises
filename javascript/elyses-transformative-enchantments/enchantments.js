@@ -6,7 +6,9 @@
  * @returns {number[]} deck with every card doubled
  */
 export function seeingDouble(deck) {
-  throw new Error("Implement the seeingDouble function");
+  const doubleDeck = deck.map((card) => card * 2);
+
+  return doubleDeck;
 }
 
 /**
