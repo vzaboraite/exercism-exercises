@@ -53,7 +53,15 @@ export function middleTwo(deck) {
  */
 
 export function sandwichTrick(deck) {
-  throw new Error("Implement the sandwichTrick function");
+  if (deck.length === 2) {
+    return deck.reverse();
+  } else {
+    const { 0: firstCard, [deck.length - 1]: lastCard } = deck;
+    const frontDeck = deck.slice(1, Math.floor(deck.length / 2));
+    const backDeck = deck.slice(Math.floor(deck.length / 2), deck.length - 1);
+
+    return [...frontDeck, lastCard, firstCard, ...backDeck];
+  }
 }
 
 /**
