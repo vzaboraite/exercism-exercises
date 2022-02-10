@@ -6,9 +6,7 @@
  * @returns {number[]} deck with every card doubled
  */
 export function seeingDouble(deck) {
-  const doubleDeck = deck.map((card) => card * 2);
-
-  return doubleDeck;
+  return deck.map((card) => card * 2);
 }
 
 /**
@@ -19,15 +17,13 @@ export function seeingDouble(deck) {
  * @returns {number[]} deck with triplicate 3s
  */
 export function threeOfEachThree(deck) {
-  const threeOfEachThreeDeck = deck.reduce((result, card) => {
+  return deck.reduce((result, card) => {
     if (card === 3) {
       return [...result, 3, 3, 3];
     } else {
       return [...result, card];
     }
   }, []);
-
-  return threeOfEachThreeDeck;
 }
 
 /**
@@ -39,9 +35,7 @@ export function threeOfEachThree(deck) {
  * @returns {number[]} deck with only two middle cards
  */
 export function middleTwo(deck) {
-  const middleDeck = deck.slice(4, 6);
-
-  return middleDeck;
+  return deck.slice(4, 6);
 }
 
 /**
@@ -72,9 +66,7 @@ export function sandwichTrick(deck) {
  * @returns {number[]} deck with only 2s
  */
 export function twoIsSpecial(deck) {
-  const filteredTwos = deck.filter((card) => card === 2);
-
-  return filteredTwos;
+  return deck.filter((card) => card === 2);
 }
 
 /**
@@ -85,9 +77,7 @@ export function twoIsSpecial(deck) {
  * @returns {number[]} ordered deck
  */
 export function perfectlyOrdered(deck) {
-  const sortedDeck = [...deck].sort((curr, next) => curr - next);
-
-  return sortedDeck;
+  return [...deck].sort((curr, next) => curr - next);
 }
 
 /**
@@ -98,7 +88,9 @@ export function perfectlyOrdered(deck) {
  * @returns {number[]} reordered deck
  */
 export function reorder(deck) {
-  const reorderedDeck = deck.reverse();
-
-  return reorderedDeck;
+  if (deck.length === 0) {
+    return [];
+  } else {
+    return deck.reverse();
+  }
 }
