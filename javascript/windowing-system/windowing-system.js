@@ -33,6 +33,26 @@ class ProgramWindow {
     this.size = new Size();
     this.position = new Position();
   }
+
+  resize(size) {
+    if (size.width < 1 || size.height < 1) {
+      this.size.resize(1, 1);
+      return;
+    }
+
+    const screenHeight = this.screenSize.height;
+    const screenWidth = this.screenSize.width;
+
+    const maxWindowHeight = screenHeight - this.position.y;
+    const maxWindowWidth = screenWidth - this.position.x;
+
+    const newWindowHeight =
+      size.height > maxWindowHeight ? maxWindowHeight : size.height;
+    const newWindowWidth =
+      size.width > maxWindowWidth ? maxWindowWidth : size.width;
+
+    this.size.resize(newWindowWidth, newWindowHeight);
+  }
 }
 
 export { Size, Position, ProgramWindow };
