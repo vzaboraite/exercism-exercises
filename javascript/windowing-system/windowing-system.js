@@ -93,4 +93,14 @@ class ProgramWindow {
   }
 }
 
-export { Size, Position, ProgramWindow };
+function changeWindow(programWindow) {
+  const newSize = new Size(400, 300);
+  const newPosition = new Position(100, 150);
+
+  programWindow.resize(newSize);
+  programWindow.move(newPosition);
+
+  return programWindow;
+}
+
+export { Size, Position, ProgramWindow, changeWindow };
