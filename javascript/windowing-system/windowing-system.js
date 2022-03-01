@@ -61,6 +61,35 @@ class ProgramWindow {
 
     this.size.resize(newWindowWidth, newWindowHeight);
   }
+
+  move({ x, y }) {
+    const screenHeight = this.screenSize.height;
+    const screenWidth = this.screenSize.width;
+
+    const maxX = screenWidth - this.size.width;
+    const maxY = screenHeight - this.size.height;
+
+    let newPositionX;
+    let newPositionY;
+
+    if (x > maxX) {
+      newPositionX = maxX;
+    } else if (x > 0) {
+      newPositionX = x;
+    } else {
+      newPositionX = 0;
+    }
+
+    if (y > maxY) {
+      newPositionY = maxY;
+    } else if (y > 0) {
+      newPositionY = y;
+    } else {
+      newPositionY = 0;
+    }
+
+    this.position.move(newPositionX, newPositionY);
+  }
 }
 
 export { Size, Position, ProgramWindow };
