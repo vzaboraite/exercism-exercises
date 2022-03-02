@@ -37,7 +37,9 @@ export function hasTrack(playlist, track) {
  * @returns {string[]} new playlist
  */
 export function addTrack(playlist, track) {
-  throw new Error("Please implement the addTrack function");
+  const newPlaylist = [...new Set(playlist).add(track)];
+
+  return newPlaylist;
 }
 
 /**
