@@ -50,7 +50,9 @@ export function addTrack(playlist, track) {
  * @returns {string[]} new playlist
  */
 export function deleteTrack(playlist, track) {
-  throw new Error("Please implement the deleteTrack function");
+  const newPlaylist = new Set(playlist);
+  newPlaylist.delete(track);
+  return [...newPlaylist];
 }
 
 /**
