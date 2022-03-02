@@ -11,7 +11,9 @@
  * @returns {string[]} new playlist with unique entries
  */
 export function removeDuplicates(playlist) {
-  throw new Error("Please implement the removeDuplicates function");
+  const uniquePlaylist = [...new Set(playlist)];
+
+  return uniquePlaylist;
 }
 
 /**
