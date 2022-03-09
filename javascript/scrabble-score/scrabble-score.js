@@ -7,7 +7,29 @@
 //
 
 export const score = (word) => {
-  const scores = {
+  let result = 0;
+  const scores = getScores();
+  const letters = getLetters(word);
+
+  if (word === "") {
+    return result;
+  }
+
+  letters.forEach((letter) => {
+    if (scores.hasOwnProperty(letter)) {
+      result += scores[letter];
+    }
+  });
+
+  return result;
+};
+
+function getLetters(str) {
+  return str.toUpperCase().split("");
+}
+
+function getScores() {
+  return {
     A: 1,
     E: 1,
     I: 1,
@@ -35,20 +57,4 @@ export const score = (word) => {
     Q: 10,
     Z: 10,
   };
-
-  let result = 0;
-  const uppercasedWord = word.toUpperCase();
-  const letters = uppercasedWord.split("");
-
-  if (uppercasedWord === "") {
-    return result;
-  }
-
-  letters.forEach((letter) => {
-    if (scores.hasOwnProperty(letter)) {
-      result += scores[letter];
-    }
-  });
-
-  return result;
-};
+}
