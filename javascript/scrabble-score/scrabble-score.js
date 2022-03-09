@@ -35,4 +35,20 @@ export const score = (word) => {
     Q: 10,
     Z: 10,
   };
+
+  let result = 0;
+  const uppercasedWord = word.toUpperCase();
+  const letters = uppercasedWord.split("");
+
+  if (uppercasedWord === "") {
+    return result;
+  }
+
+  letters.forEach((letter) => {
+    if (scores.hasOwnProperty(letter)) {
+      result += scores[letter];
+    }
+  });
+
+  return result;
 };
