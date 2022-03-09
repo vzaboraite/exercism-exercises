@@ -1,0 +1,11 @@
+//
+// This is only a SKELETON file for the 'Scrabble Score' exercise. It's been provided as a
+// convenience to get you started writing code faster.
+//
+// @param {String} word
+// @returns {Number} score of the word
+//
+
+export const score = () => {
+  throw new Error("Remove this statement and implement this function");
+};
