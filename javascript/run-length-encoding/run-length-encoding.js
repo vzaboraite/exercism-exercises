@@ -23,6 +23,28 @@ export const encode = (str) => {
   return encodedStr;
 };
 
-export const decode = () => {
-  throw new Error("Remove this statement and implement this function");
+/**
+ * if prev char is number, display current char *number times
+ * if prev char is letter or space, display curr char as it is
+ *
+ */
+
+export const decode = (str) => {
+  let decodedStr = "";
+  /**
+   * Resources about:
+   * - matchAll() => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll
+   * - regex explanation => https://regex101.com/r/LpPspa/1
+   */
+  const matches = [...str.matchAll(/(\d*)(\D)/g)];
+
+  matches.forEach((match) => {
+    const count = match[1] !== "" ? +match[1] : 1;
+    /**
+     * Resource about repeat() => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
+     */
+    decodedStr += match[2].repeat(count);
+  });
+
+  return decodedStr;
 };
