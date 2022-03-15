@@ -23,12 +23,6 @@ export const encode = (str) => {
   return encodedStr;
 };
 
-/**
- * if prev char is number, display current char *number times
- * if prev char is letter or space, display curr char as it is
- *
- */
-
 export const decode = (str) => {
   let decodedStr = "";
   /**
